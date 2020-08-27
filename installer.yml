@@ -1,0 +1,9 @@
+---
+- name: Install a new Fedora env to coding with Quarkus and GraalVM
+  hosts: localhost
+  roles:
+    - prerequisites
+    - gantsign.golang
+    - gantsign.maven
+    - gantsign.postman
+    - arolfes.graalvm

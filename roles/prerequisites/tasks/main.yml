@@ -1,0 +1,43 @@
+---
+# tasks file for prerequisites
+- name: upgrade all packages
+  become: yes
+  dnf:
+    name: "*"
+    state: latest
+
+- name: install Git
+  become: yes
+  dnf:
+    name:
+      - git
+    state: latest
+
+- name: install Java-DEVEL
+  become: yes
+  dnf:
+    name:
+      - java-devel
+    state: latest
+
+- name: install OpenJDK-DEVEL
+  become: yes
+  dnf:
+    name:
+      - java-latest-openjdk-devel.x86_64
+    state: latest
+
+- name: install OpenJDK
+  become: yes
+  dnf:
+    name:
+      - java-latest-openjdk.x86_64
+    state: latest
+
+- name: install JQ
+  become: yes
+  dnf:
+    name:
+      - jq
+    state: latest
+

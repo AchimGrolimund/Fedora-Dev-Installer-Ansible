@@ -1,0 +1,8 @@
+all:
+  hosts:
+    localhost:
+      ansible_sudo_pass: 'your sudo pass'
+      ansible_host: localhost
+      ansible_connection: local
+#    other_host:
+#      ....
